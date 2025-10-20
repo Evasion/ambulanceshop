@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Ambulance Shop Order Form</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 24px; }
+    h2 { margin-top: 32px; }
+    label { display: block; margin: 12px 0 6px; }
+    input, select { width: 300px; max-width: 100%; padding: 6px; margin-bottom: 10px; }
+    .checkbox-group { margin-bottom: 10px; }
+    button { margin: 20px 10px 0 0; padding: 8px 18px; }
+    @media print {
+      button { display: none; }
+      input, select { border: none; background: none; }
+      body { margin: 0; }
+    }
+  </style>
+</head>
+<body>
+  <h1>Ambulance Shop Order Form</h1>
+  
+  <form>
+    <h2>Section 1: General Order Information</h2>
+    <label>Order Number: <input type="text" name="order_number"></label>
+    <label>Order Date: <input type="date" name="order_date"></label>
+    <label>Quote Number: <input type="text" name="quote_number"></label>
+    <label>Job/Order No: <input type="text" name="job_order_no"></label>
+    <label>Vehicle Destination:
+      <select name="vehicle_destination">
+        <option value="Connecticut">Connecticut</option>
+        <option value="Other">Other</option>
+      </select>
+    </label>
+    <label>Vehicle Quantity: <input type="number" name="vehicle_quantity"></label>
+    <label>Reference Unit #: <input type="text" name="reference_unit"></label>
+
+    <h2>Section 2: Vehicle & Chassis Details</h2>
+    <label>Chassis VIN Number: <input type="text" name="chassis_vin"></label>
+    <label>Model:
+      <select name="model">
+        <option>Transit High Roof Van</option>
+        <option>Ford T-350 AWD W2X Transit High Roof</option>
+        <option>Other</option>
+      </select>
+    </label>
+    <label>Engine Type:
+      <select name="engine_type">
+        <option>3.5L Eco V6 GTDI Gasoline</option>
+        <option>Other</option>
+      </select>
+    </label>
+    <label>Wheelbase (inches): <input type="number" name="wheelbase"></label>
+    <label>Overall Height (inches): <input type="number" name="overall_height"></label>
+    <label>Overall Length (inches): <input type="number" name="overall_length"></label>
+    <label>GVWR (pounds): <input type="number" name="gvwr"></label>
+    <label>Payload Capacity (pounds): <input type="number" name="payload_capacity"></label>
+    <label>Seated Positions in Chassis Cab: <input type="number" name="seated_positions_cab"></label>
+    <label>Seated Positions in Rear: <input type="number" name="seated_positions_rear"></label>
+
+    <h2>Section 3: Conversion & Construction Options</h2>
+    <label>Cabinet Shop Location:
+      <select name="cabinet_shop_location">
+        <option>Action Area wall #3</option>
+        <option>Cab Console</option>
+        <option>Other</option>
+      </select>
+    </label>
+    <label>Cabinet Construction Type:
+      <select name="cabinet_construction_type">
+        <option>General</option>
+        <option>Specialty</option>
+      </select>
+    </label>
+    <label>Mica Color:
+      <select name="mica_color">
+        <option>Gloss Gray D355-01</option>
+        <option>Other</option>
+      </select>
+    </label>
+    <label>Polycarbonate Type/Color:
+      <select name="polycarbonate_type">
+        <option>Lexan - GRAY</option>
+        <option>Other</option>
+      </select>
+    </label>
+    <label>Secure Latch Type:
+      <select name="secure_latch_type">
+        <option>EVS Comfort 1782</option>
+        <option>Southco round latch</option>
+        <option>Black Lever latch</option>
+        <option>Other</option>
+      </select>
+    </label>
+    <label>Seat Type:
+      <select name="seat_type">
+        <option>EVS Comfort 1782 6-Degree Attendant seat</option>
+        <option>Other</option>
+      </select>
+    </label>
+    <label>Seatbelt System:
+      <select name="seatbelt_system">
+        <option>Per4Max Belts (S,T,P)</option>
+        <option>Other</option>
+      </select>
+    </label>
+    <label>Attendant Seat Base:
+      <select name="attendant_seat_base">
+        <option>Fixed</option>
+        <option>Swiveling</option>
+      </select>
+    </label>
+    <label>Mounting Plate System:
+      <select name="mounting_plate_system">
+        <option>1650 Mounting plate stud system from EVS</option>
+        <option>Other</option>
+      </select>
+    </label>
+
+    <h2>Section 4: Cabinet & Storage Details</h2>
+    <label>Partition Door Type:
+      <select name="partition_door_type">
+        <option>None</option>
+        <option>Solid Wall Partition</option>
+      </select>
+    </label>
+    <label>Window Type:
+      <select name="window_type">
+        <option>100% Sliding Lexan</option>
+        <option>100% Open W Composite Bulkhead Frame</option>
+        <option>Other</option>
+      </select>
+    </label>
+    <label>Sliding Window Locking Pin: <input type="text" name="window_locking_pin"></label>
+    <label>Glove Dispenser Type:
+      <select name="glove_dispenser_type">
+        <option>3-glove dispenser</option>
+        <option>No glove box provided</option>
+      </select>
+    </label>
+    <label>Cabinet Type/Label:
+      <select name="cabinet_type_label">
+        <option>Cabinet K</option>
+        <option>Cabinet L</option>
+        <option>Cabinet H</option>
+        <option>Other</option>
+      </select>
+    </label>
+    <label>Door Type:
+      <select name="door_type">
+        <option>Single, Overlay Hinged</option>
+        <option>Hinged Top</option>
+        <option>Other</option>
+      </select>
+    </label>
+    <label>Latch Type:
+      <select name="latch_type">
+        <option>Round Pull Latch: Non-locking - Chrome Finish</option>
+        <option>Lever Latch: Non-locking - Black Finish</option>
+        <option>Other</option>
+      </select>
+    </label>
+    <label>Stowage Label: <input type="text" name="stowage_label"></label>
+
+    <h2>Section 5: Electrical & Equipment</h2>
+    <label>Power Exhaust Vent Location:
+      <select name="power_exhaust_vent_location">
+        <option>REAR</option>
+        <option>Above Curbside Sliding Door</option>
+      </select>
+    </label>
+    <label>Action Area Light Type:
+      <select name="action_area_light_type">
+        <option>12V, LED, Surface Mount</option>
+        <option>Other</option>
+      </select>
+    </label>
+    <label>Upholstery Color:
+      <select name="upholstery_color">
+        <option>Dark Gray - Gunmetal</option>
+        <option>Other</option>
+      </select>
+    </label>
+    <label>Upholstery Joint Type:
+      <select name="upholstery_joint_type">
+        <option>Vacuum Formed - Seamless</option>
+        <option>Other</option>
+      </select>
+    </label>
+    <label>Paint Color:
+      <select name="paint_color">
+        <option>Oxford White (YZ)</option>
+        <option>Other</option>
+      </select>
+    </label>
+    <div class="checkbox-group">
+      <label><input type="checkbox" name="reflective_tape"> Reflective Tape</label>
+      <label><input type="checkbox" name="decals"> Decals (NO SMOKING & SEATBELT, KKK/DOT Pkg, 32” Star of Life)</label>
+      <label><input type="checkbox" name="fire_extinguisher"> Fire Extinguisher</label>
+    </div>
+    <label>Lettering: <input type="text" name="lettering"></label>
+    <label>Change Order Policy: <input type="text" name="change_order_policy"></label>
+
+    <h2>Section 6: Interior Features</h2>
+    <label>Waste Container Type:
+      <select name="waste_container_type">
+        <option>6 Quart std -CANO-04G</option>
+        <option>Molded (CANO-04G)</option>
+      </select>
+    </label>
+    <label>Sharps Container Type:
+      <select name="sharps_container_type">
+        <option>2-Gallon Sharps-A-Gator (CONT-02)</option>
+        <option>Other</option>
+      </select>
+    </label>
+    <label>Countertop Color:
+      <select name="countertop_color">
+        <option>Formica</option>
+        <option>Color keyed to interior</option>
+        <option>Other</option>
+      </select>
+    </label>
+    <label>Drawer Front Type:
+      <select name="drawer_front_type">
+        <option>Flush Fitted</option>
+        <option>Other</option>
+      </select>
+    </label>
+    <label>Trim Type:
+      <select name="trim_type">
+        <option>U-shaped Door</option>
+        <option>J-trim opening</option>
+        <option>Other</option>
+      </select>
+    </label>
+    <label>Bench Lid:
+      <select name="bench_lid">
+        <option>Dual Split</option>
+        <option>Other</option>
+      </select>
+    </label>
+    <label>Hinge Type:
+      <select name="hinge_type">
+        <option>Butt Style Hinges</option>
+        <option>Other</option>
+      </select>
+    </label>
+    <label>Lid Check/Hold-open:
+      <select name="lid_check">
+        <option>Gas Spring, Dual action</option>
+        <option>Other</option>
+      </select>
+    </label>
+    <label>Bench Lid Latch:
+      <select name="bench_lid_latch">
+        <option>Slam Action Paddle, W keeper</option>
+        <option>Other</option>
+      </select>
+    </label>
+    <div class="checkbox-group">
+      <label><input type="checkbox" name="restraint_net"> Restraint Net</label>
+    </div>
+
+    <h2>Section 7: Oxygen & Vacuum Systems</h2>
+    <label>Oxygen Outlet Type:
+      <select name="oxygen_outlet_type">
+        <option>Amico - Ohmeda/Ohio Diamond Style</option>
+        <option>Other</option>
+      </select>
+    </label>
+    <label>Oxygen Outlet Location:
+      <select name="oxygen_outlet_location">
+        <option>Action Area Panel</option>
+        <option>Ceiling Panel, Curbside</option>
+        <option>Other</option>
+      </select>
+    </label>
+    <label>Cylinder Type:
+      <select name="cylinder_type">
+        <option>OXYGEN - Green Colored Hose</option>
+        <option>Other</option>
+      </select>
+    </label>
+    <label>Vacuum System Type:
+      <select name="vacuum_system_type">
+        <option>SSCOR regulator/gauge panel in A/A</option>
+        <option>Other</option>
+      </select>
+    </label>
+    <label>Collection Canister Capacity (CC): <input type="number" name="collection_canister_capacity"></label>
+    <label>Vacuum Pump Location:
+      <select name="vacuum_pump_location">
+        <option>Under A/A, accessible through vent cover</option>
+        <option>Other</option>
+      </select>
+    </label>
+
+    <h2>Section 8: Safety & Compliance</h2>
+    <div class="checkbox-group">
+      <label><input type="checkbox" name="backup_camera"> Backup Camera</label>
+      <label><input type="checkbox" name="backup_alarm"> Backup Alarm</label>
+      <label><input type="checkbox" name="fire_extinguisher_bracket"> Fire Extinguisher Mounting Bracket</label>
+    </div>
+    <label>Warning Light System:
+      <select name="warning_light_system">
+        <option>Whelen Single Row LED</option>
+        <option>Other</option>
+      </select>
+    </label>
+    <label>Siren Type:
+      <select name="siren_type">
+        <option>Whelen, WS295SLSA1</option>
+        <option>Other</option>
+      </select>
+    </label>
+    <label>Speaker Type:
+      <select name="speaker_type">
+        <option>Surface Mount</option>
+        <option>Other</option>
+      </select>
+    </label>
+
+    <h2>Section 9: Additional Instructions/Policies</h2>
+    <label>Indemnification Statement: <input type="text" name="indemnification_statement"></label>
+    <label>Change Order Policy: <input type="text" name="change_order_policy_additional"></label>
+
+    <button type="button" onclick="window.print()">Print</button>
+  </form>
+</body>
+</html>
